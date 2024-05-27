@@ -1,6 +1,6 @@
 {
   "name": "listen-async",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Easily listen on a http/net server async",
   "main": "index.js",
   "files": [

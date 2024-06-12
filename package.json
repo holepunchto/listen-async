@@ -7,10 +7,11 @@
     "index.js"
   ],
   "devDependencies": {
+    "brittle": "^3.5.2",
     "standard": "^17.1.0"
   },
   "scripts": {
-    "test": "standard"
+    "test": "standard && brittle test.js"
   },
   "repository": {
     "type": "git",

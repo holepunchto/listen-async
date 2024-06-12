@@ -6,12 +6,22 @@
   "files": [
     "index.js"
   ],
+  "imports": {
+    "net": {
+      "bare": "bare-tcp",
+      "default": "net"
+    }
+  },
   "devDependencies": {
+    "bare-tcp": "^1.5.2",
     "brittle": "^3.5.2",
     "standard": "^17.1.0"
   },
   "scripts": {
-    "test": "standard && brittle test.js"
+    "test": "npm run lint && npm run test:bare && npm run test:node",
+    "test:bare": "bare test.js",
+    "test:node": "node test.js",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",

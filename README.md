@@ -8,7 +8,7 @@ npm install listen-async
 
 ## Usage
 
-``` js
+```js
 const listen = require('listen-async')
 
 try {

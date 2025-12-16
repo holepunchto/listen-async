@@ -36,19 +36,19 @@ test('classic pattern', async function (t) {
   await close(server2)
 })
 
-function close (server) {
+function close(server) {
   return new Promise((resolve) => {
     server.close(resolve)
   })
 }
 
-function getFreePort () {
+function getFreePort() {
   return new Promise((resolve) => {
     const server = net.createServer()
     server.once('listening', onlistening)
     server.listen(0, '127.0.0.1')
 
-    function onlistening () {
+    function onlistening() {
       const port = server.address().port
       server.close(() => resolve(port))
     }
